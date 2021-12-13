@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
+
 public class GameController {
 
     @Autowired
@@ -24,6 +24,13 @@ public class GameController {
 
     @Autowired
     private GameService gameService;
+
+    @RequestMapping("/")
+    public String homePage() {
+
+        return "Please visit https://spr-game.herokuapp.com/start to start the game";
+
+    }
 
     @RequestMapping("/start")
     public ResponseEntity<ApiResponse> startGame() {
