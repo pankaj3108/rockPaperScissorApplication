@@ -44,9 +44,9 @@ public class GameController {
         GameApiResponse gameApiResponse = null;
 
         if(game.isGameFinished())
-            gameApiResponse = new GameApiResponse("The Game is finished", game);
+            gameApiResponse = new GameApiResponse("The Game is finished.....", game);
         else
-            gameApiResponse = new GameApiResponse("The game is in progress", game);
+            gameApiResponse = new GameApiResponse("The game is in progress.....", game);
 
         return new ResponseEntity<GameApiResponse>(gameApiResponse, HttpStatus.OK);
 
