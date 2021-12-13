@@ -15,7 +15,7 @@ public class AuthenticationTokenService {
 
         AuthenticationToken authenticationToken = new AuthenticationToken();
 
-        this.authenticationTokenRepository.save(authenticationToken);
+      //  this.authenticationTokenRepository.save(authenticationToken);
 
         return authenticationToken.getToken();
     }
